@@ -17,7 +17,7 @@ class ProofGeneral < Formula
         :empty? => true)
     end
 
-    emacs_binary = `which emacs`.strip()
+    emacs_binary = '/usr/local/bin/emacs' # temporary hard-code...
     raise "#{emacs_binary} not found" if not File.exist? "#{emacs_binary}"
 
     version_info = `#{emacs_binary} --version`
